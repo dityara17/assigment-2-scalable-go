@@ -2,12 +2,11 @@ package config
 
 import (
 	"assigment-2-scalable-go/model"
-	"gorm.io/gorm"
 	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
-
-const DSN = "root@tcp(127.0.0.1:3306)/assignment_2_hackvtiv8?charset=utf8mb4&parseTime=True&loc=Local"
+const DSN = "root:root@tcp(127.0.0.1:3306)/db?charset=utf8mb4&parseTime=True&loc=Local"
 
 func DbInit() *gorm.DB {
 

@@ -12,22 +12,28 @@ import (
 func start(db *gorm.DB) {
 	r := mux.NewRouter()
 	fmt.Println("starting server...")
+
 	// open service for order
 	serviceOrder := service.Order{DB: db}
 
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		_, _ = fmt.Fprint(w, "J")
+		_, _ = fmt.Fprint(w, "Hello")
 	}).Methods("GET")
 
-	r.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
-		_, _ = fmt.Fprint(w, "Ja")
-	}).Methods("GET")
-
-	r.HandleFunc("/api/create", func(w http.ResponseWriter, r *http.Request) {
+	r.HandleFunc("/orders", func(w http.ResponseWriter, r *http.Request) {
 		s := serviceOrder.InsertOrder(w, r)
 		service.SendResponse(w, s)
 	}).Methods("POST")
 
+	r.HandleFunc("/orders", func(w http.ResponseWriter, r *http.Request) {
+		s := serviceOrder.UpdateOrder(w, r)
+		service.SendResponse(w, s)
+	}).Methods("PUT")
+
+	r.HandleFunc("/orders", func(w http.ResponseWriter, r *http.Request) {
+		s := serviceOrder.GetOrders(w, r)
+		service.SendResponse(w, s)
+	}).Methods("GET")
 
 	http.Handle("/", r)
 }
