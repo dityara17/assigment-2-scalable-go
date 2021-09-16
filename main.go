@@ -35,6 +35,16 @@ func start(db *gorm.DB) {
 		service.SendResponse(w, s)
 	}).Methods("GET")
 
+	r.HandleFunc("/orders/{id}", func(w http.ResponseWriter, r *http.Request) {
+		s := serviceOrder.GetOrder(w, r)
+		service.SendResponse(w, s)
+	}).Methods("GET")
+
+	r.HandleFunc("/orders/{id}", func(w http.ResponseWriter, r *http.Request) {
+		s := serviceOrder.DeleteOrder(w, r)
+		service.SendResponse(w, s)
+	}).Methods("DELETE")
+
 	http.Handle("/", r)
 }
 func main() {
