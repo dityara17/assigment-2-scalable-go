@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd7a5b1-61b0-43f9-99b9-5824e4b30004" name="Default Changelist" comment="update service getOrders">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ae2a0ba-c36e-45c6-9fea-88d9d3072437.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7ae2a0ba-c36e-45c6-9fea-88d9d3072437.xml" afterDir="false" />
+    <list default="true" id="6bd7a5b1-61b0-43f9-99b9-5824e4b30004" name="Default Changelist" comment="fix all">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/web/order.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/web/order.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/order.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/order.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +64,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update service getOrders" />
-    <option name="LAST_COMMIT_MESSAGE" value="update service getOrders" />
+    <MESSAGE value="fix all" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix all" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
